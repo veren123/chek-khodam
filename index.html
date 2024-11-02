@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klikanika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcome">
+        <div style="overflow: hidden; background-color: #333; padding: 10px 0; position: absolute; top: 0; width: 100%;">
+            <p style="display: inline-block; white-space: nowrap; font-size: 1.2rem; color: #ffcc00; animation: marquee 10s linear infinite; text-transform: uppercase; letter-spacing: 2px;">
+                Willkommen bei Klikanika! Bitte erkunden Sie und entdecken Sie hier spannende Funktionen!
+            </p>
+        </div>
+        <h1>Willkommen bei Klikanika</h1>
+        <p>Bitte erkunden Sie hier und genießen Sie die modernere und minimalistische Chek Khodam-Funktion!</p>
+        <p>Sie können es auch anpassen</p>
+        <p>Entwickelt von VE-rEn Software Deutschland</p>
+        <hr><a href="chek-khodam.html" class="cyberpunk-button">Klicken Sie hier, um zu erkunden</a>
+    </div>
+    <div class="jam">
+        <p>Aktuelle Uhrzeit: <span id="waktuJerman"></span></p>
+    </div>
+    
+    <script>
+        function updateClock() {
+            const options = {
+                timeZone: 'Europe/Berlin',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+            };
+            const formatter = new Intl.DateTimeFormat('de-DE', options);
+            const currentTime = formatter.format(new Date());
+    
+            document.getElementById('waktuJerman').textContent = currentTime;
+        }
+    
+        setInterval(updateClock, 1000);
+        updateClock();
+       
+        // ANSI escape codes untuk warna
+const reset = "\x1b[0m";
+const yellow = "\x1b[33m";
+const cyan = "\x1b[36m";
+
+// Fungsi untuk membuat garis
+function makeLine(char, length) {
+    return char.repeat(length);
+}
+
+// Ukuran garis
+const lineLength = 60;
+
+// Pesan dalam Bahasa Indonesia
+console.log(`${yellow}${makeLine('*', lineLength)}`);
+console.log(`${yellow}*  Jangan ganggu kodingannya pliss hacker, jangan nakal.  *`);
+console.log(`${yellow}${makeLine('*', lineLength)}${reset}`);
+
+// Pesan dalam Bahasa Jerman
+console.log(`${cyan}${makeLine('*', lineLength)}`);
+console.log(`${cyan}*  Bitte störe den Code nicht, Hacker. Sei nicht ungezogen.  *`);
+console.log(`${cyan}${makeLine('*', lineLength)}${reset}`);
+
+    </script>
+    
+</body>
+</html>

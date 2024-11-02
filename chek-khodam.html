@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klikanika</title>
+    <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <div class="popup-content">
+                <h1>Warnung!</h1>
+                <p>Die Ergebnisse, die hier erstellt werden, dienen nur der Unterhaltung. Glauben Sie nicht zu sehr daran und nutzen Sie sie mit Bedacht.</p>
+                <button id="understandButton">Ich verstehe</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="from-chek">
+        <p>Chek Khodam</p>
+        <hr>
+        <input type="text" placeholder="masukkan nama anda utuk di chek khodamnya">
+        <button>chek ✨</button>
+    </div>
+    <script src="logika.js"></script>
+    <script>
+     // ANSI escape codes untuk warna
+const reset = "\x1b[0m";
+const yellow = "\x1b[33m";
+const cyan = "\x1b[36m";
+
+// Fungsi untuk membuat garis
+function makeLine(char, length) {
+    return char.repeat(length);
+}
+
+// Ukuran garis
+const lineLength = 60;
+
+// Pesan dalam Bahasa Indonesia
+console.log(`${yellow}${makeLine('*', lineLength)}`);
+console.log(`${yellow}*  Jangan ganggu kodingannya pliss hacker, jangan nakal.  *`);
+console.log(`${yellow}${makeLine('*', lineLength)}${reset}`);
+
+// Pesan dalam Bahasa Jerman
+console.log(`${cyan}${makeLine('*', lineLength)}`);
+console.log(`${cyan}*  Bitte störe den Code nicht, Hacker. Sei nicht ungezogen.  *`);
+console.log(`${cyan}${makeLine('*', lineLength)}${reset}`);
+
+    </script>
+</body>
+</html>
